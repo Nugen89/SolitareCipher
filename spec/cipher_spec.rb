@@ -52,12 +52,21 @@ describe Cipher do
     it "encrypt input stream" do
       expect(Cipher.encrypt("Code in Ruby, live longer!")).to eq("GLNCQ MJAFF FVOMB JIYCB")
     end
+    
   end
 
   describe "Decryption" do
     it "decrypt input stream" do
       expect(Cipher.decrypt("GLNCQ MJAFF FVOMB JIYCB")).to eq("CODEI NRUBY LIVEL ONGER")
     end
+
+    it "decrypt input stream" do
+      expect(Cipher.decrypt("CLEPK HHNIY CFPWH FDFEH")).to eq("YOURC IPHER ISWOR KINGX")
+    end
+      
+    it "decrypt input stream" do
+      expect(Cipher.decrypt("ABVAW LWZSY OORYK DUPVH")).to eq("WELCO METOR UBYQU IZXXX")
+    end    
   end
 
 end
