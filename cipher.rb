@@ -34,8 +34,7 @@ class Cipher
   end
 
   def self.gen_keystream
-    # Deck.new.keystream
-    "DWJXH YRFDG TMSHP UURXJ"
+    Deck.new.keystream(21)
   end
 
   def self.to_numberstream(string)
@@ -50,7 +49,6 @@ class Cipher
     end.join(" ")
     sanitize_input(letterstream)
   end
-
 
   def self.sum_arrays(a1, a2)
     a1 = a1.split(" ")
